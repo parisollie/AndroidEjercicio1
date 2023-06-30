@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".componentesgraficos.SelectionComponentActivity">
+
+    <!--Checkbox , lo acomodamos con una regla vertical y una
+    regla horizontal
+    cb, es de checkbox-->
+    <CheckBox
+        android:id="@+id/cbFrutas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Te gustan las frutas?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbDulces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Te gustan los dulces?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <!--*****************************************************************************-->
+
+    <RadioGroup
+        android:id="@+id/rgSabor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbFrutas">
+
+        <RadioButton
+            android:id="@+id/rbDulces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dulces" />
+
+        <RadioButton
+            android:id="@+id/rbAgrias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Agrías" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgCandys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbDulces">
+
+        <RadioButton
+            android:id="@+id/rbPicositos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Picositos" />
+
+        <RadioButton
+            android:id="@+id/rbAmargos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Amargos" />
+
+    </RadioGroup>
+
+    <!--*****************************************************************************-->
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgSabor" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgCandys" />
+
+    <!--*****************************************************************************-->
+
+    <Button
+        android:id="@+id/btSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

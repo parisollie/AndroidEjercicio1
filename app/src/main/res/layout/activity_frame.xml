@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 01-FrameLayout 24/06/2023-->
+
+<!--
+
+*Aquí ponemos nuestra etiqueta de FrameLayout ,debemos recordar que es un ViewGroup que soporta
+ tener un componente dentro.
+
+*match_parente signifíca que se extiende tanto ancho como alto
+
+*El TextView  es un componente simple, así que se cierra de
+esta manera (/>)
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".componentesgraficos.FrameActivity">
+
+    <TextView
+        android:text="Poppis"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Julia"
+        android:background="@android:color/darker_gray"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Valentina"
+        android:background="@android:color/holo_green_light"
+        android:layout_gravity="top"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</FrameLayout>

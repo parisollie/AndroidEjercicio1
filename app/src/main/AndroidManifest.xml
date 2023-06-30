@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidEjercicio1"
+        tools:targetApi="31">
+        <activity
+            android:name=".componentesgraficos.ConstraintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".componentesgraficos.LinearActivity"
+            android:exported="false" />
+        <activity
+            android:name=".componentesgraficos.RelativeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".componentesgraficos.FrameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".componentesgraficos.SelectionComponentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FirstActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.IntentImplicitoActivity"
+            android:exported="false" />
+        <!--
+ Aquí le decimos que regrese a la actividad padre
+         android:parentActivityName=".FirstActivity"
+         hacemos esta flechita <-
+        -->
+        <!-- android:parentActivityName=".FirstActivity" Iba en la linea 26 -->
+        <activity
+            android:name=".activities.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".componentesgraficos.recycleview.RecyclerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.CicloVidaActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

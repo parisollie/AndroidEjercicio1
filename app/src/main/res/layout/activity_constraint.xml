@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 04-ConstraintLayout 24/06/2023
+Permite crear diseños grandes y complejos con una
+ jerarquía de vistas plana (sin grupos de vistas anidadas).
+
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".componentesgraficos.ConstraintActivity">
+
+    <!--Con el guide line ya le dije como lo quiero
+    Mi guía del principio(debemos poner el blueprint para poder verlo)
+    app:layout_constraintGuide_begin="40dp"
+    -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+    <!-- Mi guía del final -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+    <!-- Mi guía del centro -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".80" />
+    <!-- Mi guía del Inicio-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="40dp" />
+    <!--
+    app:layout_constraintVertical_chainStyle="packed", comprimelos dentro de porcentaje
+    Se deben disperar tanto de arriba como abajo
+    -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_marginTop="220dp"
+        android:layout_height="wrap_content"
+        android:hint="Correo"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <!-- inputType,para teclear lo que queremos que el usuario telcee-->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/tvRegister"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+    <EditText
+        android:id="@+id/etTel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:hint="Telefóno"
+        android:inputType="number"
+
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+    <!--
+    android:layout_width="0dp"
+    que tanto se va estirar según mis reglas
+    -->
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text="¿Ya estas registrado?"
+        app:layout_constraintBottom_toTopOf="@+id/glPercent"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <!--Alineamos el botón a nuestro guide line de porcentaje
+    app:layout_constraintTop_toTopOf="@+id/glPercent"-->
+    <Button
+        android:text="Entrar"
+        android:id="@+id/btSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="@+id/glPercent" />
+  <!--Componente de nuestra imágen.
+
+  *Nuestras imágenes estan en la carpeta drawable
+  En esta carpeta tenemos varias resoluciones de á,ocuparemos
+  la adecuada al dispositivo.
+  *Para la imagen ponemos el src.-->
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toBottomOf="@+id/glBeg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="0dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
