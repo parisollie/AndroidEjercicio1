@@ -13,7 +13,25 @@
         android:theme="@style/Theme.AndroidEjercicio1"
         tools:targetApi="31">
         <activity
-            android:name=".tareas.tarea1.FormularioActivity"
+            android:name=".tareas.tarea2.TareaFormularioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tareas.tarea2.RecibirDatosFormularioTareaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tareas.tarea1.SendMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tareas.tarea1.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tareas.tarea1.RecibirDatosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".componentesgraficos.animallist.AnimalListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,13 +58,13 @@
             android:name=".componentesgraficos.SelectionComponentActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.HomeActivity"
+            android:name=".activities.IntentImplicitoActivity"
             android:exported="false" />
         <activity
             android:name=".activities.FirstActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.IntentImplicitoActivity"
+            android:name=".activities.SecondActivity"
             android:exported="false" />
         <!--
  Aquí le decimos que regrese a la actividad padre
@@ -54,9 +72,6 @@
          hacemos esta flechita <-
         -->
         <!-- android:parentActivityName=".FirstActivity" Iba en la linea 26 -->
-        <activity
-            android:name=".activities.SecondActivity"
-            android:exported="false" />
         <activity
             android:name=".activities.CicloVidaActivity"
             android:exported="true" />

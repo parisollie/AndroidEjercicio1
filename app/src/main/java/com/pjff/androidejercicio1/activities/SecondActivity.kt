@@ -16,8 +16,6 @@ class SecondActivity : AppCompatActivity() {
         //23-Junio-2023agregar la flechita de arriba <-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
-
         //Recibimos,usando la forma corta
         val name = intent.getStringExtra("EXTRA_NAME")
         val lastName = intent.getStringExtra("EXTRA_LASTNAME")

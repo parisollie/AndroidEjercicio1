@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--01-->
+<!-- 04-ConstraintLayout 24/06/2023
+Permite crear diseños grandes y complejos con una
+ jerarquía de vistas plana (sin grupos de vistas anidadas).
+
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".componentesgraficos.ConstraintActivity">
+
+    <!--Con el guide line ya le dije como lo quiero
+    Mi guía del principio(debemos poner el blueprint para poder verlo)
+    app:layout_constraintGuide_begin="40dp"
+    -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+    <!-- Mi guía del final -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+    <!-- Mi guía del centro -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".80" />
+    <!-- Mi guía del Inicio-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="40dp" />
+    <!--
+    app:layout_constraintVertical_chainStyle="packed", comprimelos dentro de porcentaje
+    Se deben disperar tanto de arriba como abajo
+    -->
+    <EditText
+
+        android:id="@+id/correoTar"
+        android:layout_width="0dp"
+        android:layout_marginTop="220dp"
+        android:layout_height="wrap_content"
+        android:hint="Correo"
+
+        app:helperText="@string/req"
+        app:helperTextTextColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@+id/contraseniaTar"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <!-- inputType,para teclear lo que queremos que el usuario telcee-->
+    <EditText
+        android:id="@+id/contraseniaTar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/correoTar" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/nombreTar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:hint="Nombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/correoTar" />
+    <EditText
+        android:id="@+id/apellidoTar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:hint="Apellido"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/nombreTar" />
+
+    <!--
+    android:layout_width="0dp"
+    que tanto se va estirar según mis reglas
+    -->
+    <CheckBox
+        android:id="@+id/sexoTar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Cuál es tu sexo?"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apellidoTar"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sexoTar">
+
+        <RadioButton
+            android:id="@+id/MasculinoTar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M" />
+
+        <RadioButton
+            android:id="@+id/FemeninoTar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="F" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:text="Entrar"
+        android:id="@+id/botonTar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/custom_button"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="@+id/glPercent" />
+    <!--Componente de nuestra imágen.
+
+    *Nuestras imágenes estan en la carpeta drawable
+    En esta carpeta tenemos varias resoluciones de á,ocuparemos
+    la adecuada al dispositivo.
+    *Para la imagen ponemos el src.-->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glBeg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tareas.tarea1.RecibirDatosActivity">
+
+    <TextView
+        android:id="@+id/Nombrep"
+        android:text="Esto es un texto prueba"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/Apellidop"
+        android:text="Esto es un texto prueba"
+        app:layout_constraintTop_toBottomOf="@+id/Nombrep"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/Emailp"
+        android:text="Esto es un texto prueba"
+        app:layout_constraintTop_toBottomOf="@+id/Apellidop"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/Sexop"
+        android:text="Esto es un texto prueba"
+        app:layout_constraintTop_toBottomOf="@+id/Emailp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

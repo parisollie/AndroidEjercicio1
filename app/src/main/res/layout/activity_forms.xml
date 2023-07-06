@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 03-RelativeLayout 24/06/2023
+RelativeLayout es un grupo de vistas que muestra
+vistas secundarias en posiciones relativas.
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".tareas.tarea1.FormsActivity">
+    <!--
+    Colores
+    android:background="#37AEE4"
+    android:backgroundTint="#FEFBDE"
+    android:background="@android:color/holo_purple"
+    El padding vertical es para que haya esa separación del texto
+    Ingresa tus datos
+
+    *Para poder centrar tanto en vertical como horizontal
+    android:layout_centerInParent="true"
+
+    *hint, es para que aparezca lo que debemos poner
+    -->
+
+    <TextView
+        android:text="Ingresa tus datos"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:paddingVertical="10dp"
+        android:background="#37AEE4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--Agregamos nuestros componentes -->
+    <EditText
+        android:id="@+id/Nombrep"
+        android:hint="Nombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/Apellidop"
+        android:hint="Apellido"
+        android:layout_below="@+id/Nombrep"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/Emailp"
+        android:hint="Email"
+        android:layout_below="@+id/Apellidop"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/Sexop"
+        android:hint="Sexo"
+        android:layout_below="@+id/Emailp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/btCallp"
+        android:text="Entrar"
+        android:layout_below="@+id/Sexop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+
+        />
+</RelativeLayout>
