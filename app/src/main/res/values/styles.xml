@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--6 de Junio 2023
+tamano de texto es sp
+-->
+    <style name="TurquesaEditText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/turquesa</item>
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/bernier_shade_regular</item>
+    </style>
+</resources>

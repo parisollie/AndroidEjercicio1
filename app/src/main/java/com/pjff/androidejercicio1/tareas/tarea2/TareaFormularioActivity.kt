@@ -1,6 +1,6 @@
 package com.pjff.androidejercicio1.tareas.tarea2
 
-//02
+//02--ME SIRVE,para pasar los datos de registro a la tercera actividad
 
 import android.content.Intent
 import android.icu.text.Transliterator.Position

@@ -75,18 +75,6 @@ Permite crear diseños grandes y complejos con una
         app:layout_constraintStart_toStartOf="@+id/glStart"
         app:layout_constraintTop_toBottomOf="@+id/correoTar" />
 
-
-
-
-
-
-
-
-
-
-
-
-
     <EditText
         android:id="@+id/nombreTar"
         android:layout_width="0dp"

@@ -3,6 +3,7 @@ package com.pjff.androidejercicio1.componentesgraficos.animallist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.pjff.androidejercicio1.R
@@ -19,20 +20,20 @@ class AnimalListActivity : AppCompatActivity() {
         Haremos una instancia*/
 
         val animalList = listOf(
-            Animal("Leon", "Amarillo"),
-            Animal("Jirafa", "Amarillo"),
-            Animal("Cocodrilo", "Verde"),
-            Animal("Colibri", "Azul"),
-            Animal("Orca", "Negro"),
-            Animal("Oso", "Blanco")
+            Animal("Leon", "Amarillo","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            Animal("Jirafa", "Amarillo","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            Animal("Cocodrilo", "Verde","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            Animal("Colibri", "Azul","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            Animal("Orca", "Negro","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            Animal("Oso", "Blanco","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU")
         )
 
         /*Pasamos una instancia de nuestro animal adapter*/
         val adapter = AnimalAdapter(animalList)
-
-       /* adapter.onItemSelected = { animal ->
+        //Le pasamos nuestro animal seleccionado
+        adapter.onItemSelected = { animal ->
             Toast.makeText(this, "${animal.name}", Toast.LENGTH_SHORT).show()
-        }*/
+        }
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         //list.layoutManager = GridLayoutManager(this, 2)

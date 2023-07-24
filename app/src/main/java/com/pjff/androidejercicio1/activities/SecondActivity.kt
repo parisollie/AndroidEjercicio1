@@ -1,12 +1,14 @@
 package com.pjff.androidejercicio1.activities
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import com.pjff.androidejercicio1.R
+import com.pjff.androidejercicio1.componentesgraficos.animallist.Animal
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +26,14 @@ class SecondActivity : AppCompatActivity() {
         val tel = intent.getIntExtra("EXTRA_TEL", 0)
         val sex = intent.getStringExtra("EXTRA_SEX")
 
+        //6/junio/2023
+        val animal = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            intent.getSerializableExtra("EXTRA_ANIMAL", Animal::class.java)
+        } else {
+            //Si es menor, ocupa el metodo anterior
+            intent.getSerializableExtra("EXTRA_ANIMAL") as Animal
+        }
+
         //Despliegamos la información
         val tvName = findViewById<TextView>(R.id.tvName)
         val tvLastname = findViewById<TextView>(R.id.tvLastname)
@@ -31,6 +41,9 @@ class SecondActivity : AppCompatActivity() {
         val tvDir = findViewById<TextView>(R.id.tvDir)
         val tvTel = findViewById<TextView>(R.id.tvTel)
         val tvSex = findViewById<TextView>(R.id.tvSexo)
+
+        //6//junio/2023
+        tvName.text = animal?.name
 
         //Asignamos los valores
         tvName.text = name
@@ -57,8 +70,8 @@ class SecondActivity : AppCompatActivity() {
 
     //Metodo para manejar los clciks de <-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            android.R.id.home ->{
+        when (item.itemId) {
+            android.R.id.home -> {
                 val returnIntent = Intent().apply {
                     putExtra("EXTRA_IS_OK", true)
                     //23-Junio-Lo usamos para cerrar ,la actividad

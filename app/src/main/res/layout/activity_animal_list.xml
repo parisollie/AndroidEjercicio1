@@ -13,13 +13,22 @@
     Ponemos match paret porque sera una lista
     Para mosrtrar una lista necesitamos un adapatador,
     el adaptador necesita una lista de datos, este pinta en el reciler view cada item
-
-
     -->
-    
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/animalList"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btNext"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"/>
+
+    <Button
+        android:id="@+id/btNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Siguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
