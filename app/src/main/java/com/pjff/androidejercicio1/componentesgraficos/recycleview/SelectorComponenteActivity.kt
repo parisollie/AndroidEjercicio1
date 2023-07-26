@@ -16,13 +16,17 @@ import com.pjff.androidejercicio1.databinding.ActivitySelectorComponenteBinding
 
 
 class SelectorComponenteActivity : AppCompatActivity() {
+    //Variable global de nuestro layout
+    //Instanciar nuestros componentes graficos a nuestra clase
     private lateinit var binding:ActivitySelectorComponenteBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //El meotodo inflate,le decimos que buestro activity_selector lo infla y obtenemos referencia
+        //a nuestro Layout
         binding = ActivitySelectorComponenteBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_selector_componente)
-
+        //Le mandamos el view que inflamos
         setContentView(binding.root)
 
         //CHECKBOX
