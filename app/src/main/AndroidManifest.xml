@@ -42,7 +42,7 @@
             android:name=".activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".fragments.params.ParamsActivity"
+            android:name=".componentesgraficos.animallist.AnimalListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,7 +63,7 @@
             android:name=".componentesgraficos.RelativeActivity"
             android:exported="false" />
         <activity
-            android:name=".componentesgraficos.animallist.AnimalListActivity"
+            android:name=".fragments.params.ParamsActivity"
             android:exported="false" />
         <activity
             android:name=".componentesgraficos.SelectionComponentActivity"
@@ -78,7 +78,7 @@
             android:name=".activities.SecondActivity"
             android:exported="false" />
         <!--
- Aquí le decimos que regrese a la actividad padre
+         Aquí le decimos que regrese a la actividad padre
          android:parentActivityName=".FirstActivity"
          hacemos esta flechita <-
         -->

@@ -10,7 +10,8 @@
     tools:context=".componentesgraficos.animallist.AnimalListActivity">
 
     <!--
-    Ponemos match paret porque sera una lista
+    Paso 1
+    Ponemos match parent porque sera una lista
     Para mosrtrar una lista necesitamos un adapatador,
     el adaptador necesita una lista de datos, este pinta en el reciler view cada item
     -->
