@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--Le mandamos un id para hacerlo general
+ android:id="@+id/root"-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--
+   Card View solo debe tener un hijo
+   -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--
+               Paso 11, Diseño de mi item
+               En un item de un recycler view debe tener un wrap parent-->
+            <ImageView
+                android:id="@+id/ivAnimal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="center"
+                android:src="@drawable/img_android"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--
+            Paso 12, le ponemos el texto
+            Para el color android:textColor="@color/turquesa"
+            -->
+            <TextView
+                android:id="@+id/tvAnimalName"
+                style="@style/TurquesaEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/bernier_shade_regular"
+                android:text="skjdbckjsdbcjksdcbksc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivAnimal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
