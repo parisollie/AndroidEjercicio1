@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--Le mandamos un id para hacerlo general
+<?xml version="1.0" encoding="utf-8"?>
+<!--Paso 4.0,Le mandamos un id para hacerlo general
  android:id="@+id/root"-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -34,7 +35,15 @@
                 app:layout_constraintTop_toTopOf="parent" />
             <!--
             Paso 12, le ponemos el texto
-            Para el color android:textColor="@color/turquesa"
+            Para el color cpn variables de entorno y queda asi:
+
+            android:textColor="@color/turquesa"
+
+            a
+
+            style="@style/TurquesaEditText"
+
+            agregamos la fuente que descargamos
             -->
             <TextView
                 android:id="@+id/tvAnimalName"
@@ -43,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:fontFamily="@font/bernier_shade_regular"
-                android:text="skjdbckjsdbcjksdcbksc"
+                android:text="Juan Pablo Te amo :p"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivAnimal"
                 app:layout_constraintTop_toTopOf="parent" />

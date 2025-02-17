@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!-- Para que nos cargue el internet -->
+    <!-- Para que nos cargue el internet,para las imagenes -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application

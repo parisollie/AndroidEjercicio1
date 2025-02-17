@@ -5,8 +5,10 @@
 tamano de texto es sp
 -->
     <style name="TurquesaEditText" parent="Widget.AppCompat.TextView">
+        <!--Tomara los siqguientes atributos al ser declarados-->
         <item name="android:textColor">@color/turquesa</item>
         <item name="android:textSize">24sp</item>
         <item name="fontFamily">@font/bernier_shade_regular</item>
     </style>
+
 </resources>
